@@ -2,12 +2,16 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Listener](#listener)
-- [Processor](#processor)
-- [How to start bridge](#how-to-start-bridge)
-- [Reset](#reset)
-- [Common Issues (FAQ)](#common-issues-faq)
+- [Bridge (Setu)](#bridge-setu)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Listener](#listener)
+  - [Processor](#processor)
+  - [How to start bridge](#how-to-start-bridge)
+  - [Reset](#reset)
+  - [Common Issues (FAQ)](#common-issues-faq)
+    - [Connection reset by peer](#connection-reset-by-peer)
+    - [Validator is unable to propose checkpoints](#validator-is-unable-to-propose-checkpoints)
 
 ## Overview
 
@@ -15,7 +19,7 @@ Bridge module is responsible for listening to multiple chains and processing the
 
 In order to process the events emitted by the chains, bridge module uses `processor` component, which is responsible for processing the events emitted by the chains. For example `processor/clerk.go` is responsible for processing the events related to clerk module, `processor/staking.go` is responsible for processing the events related to staking module and so on.
 
-Other components of the bridge module includes `queue` which is used for queuing the messages between listner and processors, `broadcaster` which is responsible for broadcasting the messages to the heimdall chain.
+Other components of the bridge module includes `queue` which is used for queuing the messages between listener and processors, `broadcaster` which is responsible for broadcasting the messages to the heimdall chain.
 
 Polygon PoS bridge provides a bridging mechanism that is near-instant, low-cost, and quite flexible.
 

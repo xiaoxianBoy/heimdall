@@ -2,18 +2,21 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Commands](#commands)
-  - [Query Commands](#query-commands)
-  - [Tx Commands](#tx-commands)
-  - [Run Using CLI](#run-using-cli)
-  - [Run Using REST](#run-using-rest)
+- [Governance Module](#governance-module)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Param change proposal](#param-change-proposal)
+  - [Commands](#commands)
+    - [Query Commands](#query-commands)
+    - [Tx Commands](#tx-commands)
+    - [Run Using CLI](#run-using-cli)
+    - [Run Using REST](#run-using-rest)
 
 ## Overview
 
 Heimdall governance works exactly the same as Cosmos-sdk's gov module. In this system, holders of the native staking token of the chain can vote on proposals on a 1 token = 1 vote basis. Here is a list of features the module currently supports:
 
-- Proposal submission: Validators can submit proposals with a deposit. Once the minimum deposit is reached, proposal enters voting period. Valdiators that deposited on proposals can recover their deposits once the proposal is rejected or accepted.
+- Proposal submission: Validators can submit proposals with a deposit. Once the minimum deposit is reached, proposal enters voting period. Validators that deposited on proposals can recover their deposits once the proposal is rejected or accepted.
 - Vote: Validators can vote on proposals that reached MinDeposit.
 
 There are deposit period and voting period as params in gov module. Minimum deposit has to be achieved before deposit period ends, otherwise proposal will be automatically rejected.
